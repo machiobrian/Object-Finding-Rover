@@ -105,7 +105,7 @@ def on_message(client, userdata, msg):
         hotwordTime = time.time() +10
         GPIO.output(21, GPIO.HIGH)
         GPIO.output(20, GPIO.LOW)
-        print "voice start"
+        print ("voice start")
 
     if (tf_in.find('coco') != -1):
         #print ("coco")
@@ -386,7 +386,7 @@ if __name__ == "__main__":
             if hotwordTime<time.time():
                 GPIO.output(20, GPIO.LOW)
                 GPIO.output(21, GPIO.LOW)
-                print "voice timeout"             
+                print ("voice timeout")
             
             if (currentDetection == "face"):
                 if (time.time() > startTime + 10):
